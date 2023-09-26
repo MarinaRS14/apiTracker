@@ -23,12 +23,6 @@ function MapBlock() {
   const { location, latitude, longitude } = useSelector((state) => state.search);
 
   const position = [latitude, longitude];
-
-  // if (latitude && longitude) {
-  //   console.log(position);
-
-  // }
-
   return (
     <Map>
       <MapContainer

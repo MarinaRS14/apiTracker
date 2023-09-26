@@ -19,8 +19,6 @@ function SearchBlock() {
       setUserIP(data.ip);
 
       if (userIP) {
-        // dispatch(addDefaultIPAction(userIP));
-        // console.log(userIP);
         const { data } = await axios.get(
           `https://geo.ipify.org/api/v2/country,city?apiKey=at_2bqWkvzhgS2vlV9xeEWBBSjIRn7NN&ipAddress=${userIP}`,
         );
