@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import btnImg from '../assets/svg/input_btn.svg';
 import { Button, Input, Search } from '../styles/headerStyle';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { addSearchAction } from '../store/reducers/searchResultReduser';
-import { addDefaultIPAction } from '../store/reducers/addDefaultIP';
+import { Arrow } from '../assets/svg/arrow';
 
 function SearchBlock() {
   const dispatch = useDispatch();
@@ -50,7 +49,7 @@ function SearchBlock() {
           onChange={(e) => setSearchValue(e.target.value)}
         />
         <Button type="submit">
-          <img src={btnImg} alt="send" />
+          <Arrow color={'#fff'} />
         </Button>
       </form>
     </Search>

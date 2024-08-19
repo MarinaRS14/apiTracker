@@ -51,6 +51,10 @@ export const Button = styled.button`
   border-radius: 0 15px 15px 0;
   &:hover {
     cursor: pointer;
+
+    svg {
+      color: lightgrey;
+    }
   }
   & > img {
     right: 58px;
