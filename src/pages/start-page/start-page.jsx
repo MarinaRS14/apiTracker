@@ -1,6 +1,6 @@
 import React from 'react';
-import { PageWrapper } from '../../shared/ui/page-wrapper/page-wrapper';
 import { Typewriter } from 'react-simple-typewriter';
+import { Button, PageWrapper } from '../../shared/ui';
 
 export const StartPage = () => {
   return (
@@ -13,6 +13,11 @@ export const StartPage = () => {
         Use the IP tracker with an IP address to identify and collect details based on the IP
         number. Find place on the map using IP Tracker.
       </p>
+
+      <div>
+        <Button text={'get started'} />
+        <Button text={'documentation'} outlined />
+      </div>
     </PageWrapper>
   );
 };

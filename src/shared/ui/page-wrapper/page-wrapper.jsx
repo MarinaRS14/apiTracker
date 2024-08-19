@@ -30,6 +30,18 @@ const Main = styled.main`
       width: 80vw;
     }
   }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 15px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
 `;
 
 export const PageWrapper = (props) => {
