@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import { Button, PageWrapper } from '../../shared/ui';
+import { Link } from 'react-router-dom';
 
 export const StartPage = () => {
   const DOC_URL = process.env.REACT_APP_DOC_URL;
@@ -18,9 +19,9 @@ export const StartPage = () => {
       </p>
 
       <div>
-        <a href="/tracker">
+        <Link to={'/main'}>
           <Button text={'get started'} />
-        </a>
+        </Link>
         <a href={DOC_URL} target={'_blank'} rel="noreferrer">
           <Button text={'documentation'} outlined />
         </a>
