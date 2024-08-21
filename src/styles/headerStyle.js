@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import bgImg from '../assets/img/pattern-bg.png';
-
+import * as palette from '../shared/styles';
 export const InfoWrapper = styled.div`
   width: 100%;
   height: 100%;
@@ -30,7 +30,7 @@ export const HeaderStyle = styled.div`
 `;
 
 export const Title = styled.h1`
-  color: #fff;
+  color: ${palette.COLOR_LIGHT};
   font-weight: 600;
   font-size: 31px;
   padding-top: 30px;
@@ -63,9 +63,8 @@ export const Button = styled.button`
 
 export const Input = styled.input`
   width: calc(555px - 58px);
-  height: 100%;
+  background-color: ${palette.COLOR_LIGHT};
   border: none;
-  border-radius: 15px 0 0 15px;
 
   padding-left: 24px;
   font-weight: 400;
@@ -89,6 +88,7 @@ export const Input = styled.input`
 export const Search = styled.div`
   display: flex;
   flex-direction: row;
-  height: 58px;
   margin-top: 28px;
+  background-color: ${palette.COLOR_LIGHT};
+  border-radius: 15px;
 `;

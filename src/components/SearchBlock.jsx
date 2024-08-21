@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Input, Search } from '../styles/headerStyle';
 import axios from 'axios';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addSearchAction } from '../store/reducers/searchResultReduser';
 import { Arrow } from '../assets/svg/arrow';
 
 function SearchBlock() {
+  const GEOIPIFY_URL = process.env.REACT_APP_GEOIPIFY_URL;
+
   const dispatch = useDispatch();
-  const state = useSelector((state) => state.search);
 
   const [searchValue, setSearchValue] = useState('');
   const [userIP, setUserIP] = useState('');
@@ -18,9 +19,7 @@ function SearchBlock() {
       setUserIP(data.ip);
 
       if (userIP) {
-        const { data } = await axios.get(
-          `https://geo.ipify.org/api/v2/country,city?apiKey=at_2bqWkvzhgS2vlV9xeEWBBSjIRn7NN&ipAddress=${userIP}`,
-        );
+        const { data } = await axios.get(`${GEOIPIFY_URL}${userIP}`);
         dispatch(addSearchAction({ ...data }));
       }
     };
@@ -31,9 +30,7 @@ function SearchBlock() {
     e.preventDefault();
 
     if (searchValue) {
-      const { data } = await axios.get(
-        `https://geo.ipify.org/api/v2/country,city?apiKey=at_2bqWkvzhgS2vlV9xeEWBBSjIRn7NN&ipAddress=${searchValue}`,
-      );
+      const { data } = await axios.get(`${GEOIPIFY_URL}${searchValue}`);
       dispatch(addSearchAction({ ...data }));
       setSearchValue('');
     }
