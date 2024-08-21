@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 export const StartPage = () => {
   const DOC_URL = process.env.REACT_APP_DOC_URL;
 
-  console.log(DOC_URL);
   return (
     <PageWrapper>
       <span>

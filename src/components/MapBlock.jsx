@@ -18,8 +18,7 @@ const customMarker = new L.icon({
 });
 
 function MapBlock() {
-  const dispatch = useDispatch();
-  const { location, latitude, longitude } = useSelector((state) => state.search);
+  const { latitude, longitude } = useSelector((state) => state.search);
 
   const position = [latitude, longitude];
   return (
