@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import bgImg from '../../assets/img/pattern-bg.png';
-import * as palette from '.';
+import * as palette from './colors';
 export const InfoWrapper = styled.div`
   width: 100%;
   height: 100%;
