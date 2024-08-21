@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import { Map } from '../styles/mapStyle';
-import { MapContainer, TileLayer, Marker, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, useMap, ZoomControl } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { useDispatch, useSelector } from 'react-redux';
@@ -24,20 +23,20 @@ function MapBlock() {
 
   const position = [latitude, longitude];
   return (
-    <Map>
-      <MapContainer
-        center={position}
-        zoom={9}
-        scrollWheelZoom={true}
-        style={{ width: 'inherit', height: 'inherit' }}>
-        <TileLayer
-          attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
-          url="https://api.maptiler.com/maps/outdoor-v2/256/{z}/{x}/{y}.png?key=3tT4H5qHpo9xwGAGitRd"
-        />
-        <Marker position={position} icon={customMarker}></Marker>
-        <SetViewOnClick position={position} />
-      </MapContainer>
-    </Map>
+    <MapContainer
+      zoomControl={false}
+      center={position}
+      zoom={9}
+      scrollWheelZoom={false}
+      style={{ minHeight: '100%', height: '100%' }}>
+      <TileLayer
+        attribution='<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+        url="https://api.maptiler.com/maps/outdoor-v2/256/{z}/{x}/{y}.png?key=3tT4H5qHpo9xwGAGitRd"
+      />
+      <Marker position={position} icon={customMarker}></Marker>
+      <SetViewOnClick position={position} />
+      <ZoomControl position="bottomright" />
+    </MapContainer>
   );
 }
 

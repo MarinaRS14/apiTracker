@@ -1,8 +1,8 @@
 import styled from 'styled-components';
+import * as palette from '../shared/styles';
 
 export const MainContainer = styled.div`
-  max-width: 1440px;
   height: 100vh;
-  background-color: rgb(89, 106, 202);
+  background-color: ${palette.COLOR_MAIN};
   position: relative;
 `;

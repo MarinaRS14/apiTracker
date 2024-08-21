@@ -6,7 +6,7 @@ export const InfoContainer = styled.div`
   border-radius: 15px;
   background: #ffffff;
   position: absolute;
-  z-index: 100;
+  z-index: 1000;
   padding: 35px 0 35px 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
