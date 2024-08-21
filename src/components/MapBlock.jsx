@@ -2,7 +2,7 @@ import React from 'react';
 import { MapContainer, TileLayer, Marker, useMap, ZoomControl } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 function SetViewOnClick({ position }) {
   const map = useMap();
