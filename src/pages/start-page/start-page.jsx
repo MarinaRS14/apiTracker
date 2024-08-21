@@ -18,7 +18,7 @@ export const StartPage = () => {
       </p>
 
       <div>
-        <Link to={'/main'}>
+        <Link to={'/ip-tracker/main'}>
           <Button text={'get started'} />
         </Link>
         <a href={DOC_URL} target={'_blank'} rel="noreferrer">
