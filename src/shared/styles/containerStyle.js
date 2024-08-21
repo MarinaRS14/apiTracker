@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import * as palette from '../shared/styles';
+import * as palette from '.';
 
 export const MainContainer = styled.div`
   height: 100vh;

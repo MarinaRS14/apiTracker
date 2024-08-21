@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Input, Search } from '../styles/headerStyle';
+import { Button, Input, Search } from '../shared/styles/headerStyle';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { addSearchAction } from '../store/reducers/searchResultReduser';
