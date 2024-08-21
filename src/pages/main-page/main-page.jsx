@@ -8,7 +8,9 @@ export const MainPage = () => {
     <>
       <MainContainer>
         <Header />
-        <MapBlock />
+        <div style={{ height: 'calc(100vh - 280px)' }}>
+          <MapBlock />
+        </div>
       </MainContainer>
     </>
   );
