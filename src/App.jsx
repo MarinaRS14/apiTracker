@@ -10,8 +10,8 @@ function App() {
       <GlobalStyles />
 
       <Routes>
-        <Route path="/" element={<StartPage />} />
-        <Route path="/main" element={<MainPage />} />
+        <Route path="/ip-tracker" element={<StartPage />} />
+        <Route path="/ip-tracker/main" element={<MainPage />} />
       </Routes>
     </>
   );
