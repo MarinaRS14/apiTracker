@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeaderStyle, Title, InfoWrapper } from '../styles/headerStyle';
+import { HeaderStyle, Title, InfoWrapper } from '../shared/styles/headerStyle';
 
 import InfoBlock from './InfoBlock';
 import SearchBlock from './SearchBlock';

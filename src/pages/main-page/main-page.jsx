@@ -1,7 +1,7 @@
 import React from 'react';
-import { MainContainer } from '../../styles/containerStyle';
 import Header from '../../components/Header';
 import MapBlock from '../../components/MapBlock';
+import { MainContainer } from '../../shared/styles';
 
 export const MainPage = () => {
   return (

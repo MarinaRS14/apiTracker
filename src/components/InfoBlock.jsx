@@ -1,9 +1,8 @@
 import React from 'react';
-import { InfoContainer, TitleInfo, Text, InfoCell, OutsideContainer } from '../styles/infoStyle.js';
-import { useDispatch, useSelector } from 'react-redux';
+import { InfoContainer, TitleInfo, Text, InfoCell } from '../shared/styles';
+import { useSelector } from 'react-redux';
 
 function InfoBlock() {
-  const dispatch = useDispatch();
   const { ip, location, timezone, isp } = useSelector((state) => state.search);
 
   return (

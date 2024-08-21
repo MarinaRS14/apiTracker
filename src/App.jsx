@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { MainPage, StartPage } from './pages';
-import { GlobalStyles } from './styles/globalStyle';
 import { Routes, Route } from 'react-router-dom';
+import { GlobalStyles } from './shared/styles';
 
 function App() {
   return (
